@@ -12,7 +12,7 @@ app.use(express.urlencoded({extended:true}))
 
 
 
-// ConnectDb();
+ ConnectDb();
 // api Routes middlewares
 app.use("/api" , health)
 app.use("/api" , user)
