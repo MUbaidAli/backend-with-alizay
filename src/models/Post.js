@@ -35,7 +35,7 @@ const postSchema = new mongoose.Schema({
     status:{
         type:String,
         default:"draft",
-        enum:["draft","published"]
+        enum:["draft","public"]
     }
 
 },{timestamps:true})
