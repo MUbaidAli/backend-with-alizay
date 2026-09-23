@@ -4,6 +4,7 @@ require("dotenv").config();
 const health  = require("./src/routes/health")
 const user  = require("./src/routes/user")
 const post  = require("./src/routes/post")
+const comment  = require("./src/routes/comment")
 const ConnectDb = require("./src/config/connection");
 const { notFound, errorHandler } = require("./src/middlewares/errorHandler");
 const extramd = require("./src/middlewares/extramid");
@@ -20,6 +21,7 @@ ConnectDb();
 app.use("/api" , health)
 app.use("/api" , user)
 app.use("/api" , post)
+app.use("/api" , comment)
 
 
 // Custom Error Handlers

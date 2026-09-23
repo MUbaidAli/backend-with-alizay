@@ -1,10 +1,14 @@
 const User = require("../models/User");
 const { AppError, asyncHandler } = require("../utils/error");
 const bcrypt = require("bcrypt")
-const jwt = require("jsonwebtoken")
+const jwt = require("jsonwebtoken");
+const { registerSchema } = require("../validators/authValidators");
 const register=  asyncHandler( async function (req,res,next){
 
     // extract data from body
+
+    console.log("runniggggg")
+
 const {username,email,password} = req.body;
 // console.log(body)
 

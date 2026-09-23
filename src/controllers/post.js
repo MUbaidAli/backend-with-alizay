@@ -106,10 +106,10 @@ const updatePost = asyncHandler(async function(){
      const { title, content, tags, coverImageUrl, published } = req.body;
 
     if (title !== undefined) post.title = title;
-  if (content !== undefined) post.content = content;
-  if (tags !== undefined) post.tags = tags;
-  if (coverImageUrl !== undefined) post.coverImageUrl = coverImageUrl;
-  if (published !== undefined) post.published = published;
+    if (content !== undefined) post.content = content;
+    if (tags !== undefined) post.tags = tags;
+    if (coverImageUrl !== undefined) post.coverImageUrl = coverImageUrl;
+    if (published !== undefined) post.published = published;
 
 
   await post.save();
